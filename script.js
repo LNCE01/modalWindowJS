@@ -13,12 +13,12 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
   btnsOpenModal[i].addEventListener("click", openModalWindow(modal, overlay));
 }
 
-btnCloseModal.addEventListener("click", closeModalWindow);
+btnCloseModal.addEventListener("click", closeModalWindow(modal, overlay));
 
-overlay.addEventListener("click", closeModalWindow);
+overlay.addEventListener("click", closeModalWindow(modal, overlay));
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape" && !modal.classList.contains("hidden")) {
-    closeModalWindow();
+    closeModalWindow(modal, overlay);
   }
 });
