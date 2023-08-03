@@ -10,7 +10,7 @@ const btnsOpenModal = document.querySelectorAll(".show-modal");
 //Looping through the 3 buttons (which is basically an array holding all the buttons)
 for (let i = 0; i < btnsOpenModal.length; i++) {
   //we input a function expression
-  btnsOpenModal[i].addEventListener("click", openModalWindow);
+  btnsOpenModal[i].addEventListener("click", openModalWindow(modal, overlay));
 }
 
 btnCloseModal.addEventListener("click", closeModalWindow);
