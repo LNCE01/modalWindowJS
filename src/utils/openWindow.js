@@ -1,6 +1,6 @@
-const openModalWindow = function (modal, overlay) {
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
+const openModalWindow = function () {
+  document.querySelector(".modal").classList.remove("hidden");
+  document.querySelector(".overlay").classList.remove("hidden");
 };
 
 export default openModalWindow;
