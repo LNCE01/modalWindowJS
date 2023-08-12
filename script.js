@@ -16,7 +16,7 @@ btnCloseModal.addEventListener("click", closeModalWindow);
 
 document
   .querySelector(".overlay")
-  .addEventListener("click", closeModalWindow());
+  .classList.addEventListener("click", add("hidden"));
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape" && !modal.classList.contains("hidden")) {
