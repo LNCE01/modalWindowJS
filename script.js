@@ -1,7 +1,7 @@
 "use strict";
 import closeModalWindow from "./src/utils/closeWindow.js";
 import openModalWindow from "./src/utils/openWindow.js";
-
+const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 const btnsOpenModal = document.querySelectorAll(".show-modal");
 
@@ -13,7 +13,7 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 
 btnCloseModal.addEventListener("click", closeModalWindow);
 
-document.querySelector(".overlay").addEventListener("click", closeModalWindow);
+overlay.addEventListener("click", overlay.setAttribute("class", "hidden"));
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape" && !modal.classList.contains("hidden")) {
