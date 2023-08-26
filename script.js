@@ -2,6 +2,7 @@
 import closeModalWindow from "./src/utils/closeWindow.js";
 import openModalWindow from "./src/utils/openWindow.js";
 
+const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 const btnsOpenModal = document.querySelectorAll(".show-modal");
@@ -14,14 +15,10 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 
 btnCloseModal.addEventListener("click", closeModalWindow);
 
-overlay.addEventListener("click", overlay.setAttribute("class", "hidden"));
+overlay.addEventListener("click", overlay.classList.add("hidden"));
 
-// const modalWindowIsOpen = !document
-//   .querySelector(".modal")
-//   .classList.contains("hidden");
-
-// document.addEventListener("keydown", function (event) {
-//   if (event.key === "Escape" && modalWindowIsOpen) {
-//     closeModalWindow();
-//   }
-// });
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModalWindow();
+  }
+});
