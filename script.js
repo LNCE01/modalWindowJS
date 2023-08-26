@@ -3,7 +3,6 @@ import closeModalWindow from "./src/utils/closeWindow.js";
 import openModalWindow from "./src/utils/openWindow.js";
 
 const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 const btnsOpenModal = document.querySelectorAll(".show-modal");
 
