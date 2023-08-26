@@ -16,12 +16,12 @@ btnCloseModal.addEventListener("click", closeModalWindow);
 
 overlay.addEventListener("click", overlay.setAttribute("class", "hidden"));
 
-const modalWindowOpen = !document
-  .querySelector(".modal")
-  .classList.contains("hidden");
+// const modalWindowIsOpen = !document
+//   .querySelector(".modal")
+//   .classList.contains("hidden");
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape" && modalWindowOpen) {
-    closeModalWindow();
-  }
-});
+// document.addEventListener("keydown", function (event) {
+//   if (event.key === "Escape" && modalWindowIsOpen) {
+//     closeModalWindow();
+//   }
+// });
