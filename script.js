@@ -1,23 +1,48 @@
 "use strict";
 import closeModalWindow from "./src/utils/closeWindow.js";
-import openModalWindow from "./src/utils/openWindow.js";
+// import openWindow from "./src/utils/openWindow.js";
 
-const modal = document.querySelector(".modal");
-const btnCloseModal = document.querySelector(".close-modal");
-const btnsOpenModal = document.querySelectorAll(".show-modal");
+document.addEventListener("DOMContentLoaded", function () {
+  //Text Window
+  const buttonText = document.querySelector(".button-text");
+  buttonText.addEventListener("click", function () {
+    document.querySelector(".textWindow").classList.remove("hidden");
+    document.querySelector(".overlay").classList.remove("hidden");
+  });
 
-//Looping through the 3 buttons (which is basically an array holding all the buttons)
-for (let i = 0; i < btnsOpenModal.length; i++) {
-  //we input a function expression
-  btnsOpenModal[i].addEventListener("click", openModalWindow);
-}
+  //Image Window
+  const buttonImage = document.querySelector(".button-image");
+  buttonImage.addEventListener("click", function () {
+    document.querySelector(".imageWindow").classList.remove("hidden");
+    document.querySelector(".overlay").classList.remove("hidden");
+  });
 
-btnCloseModal.addEventListener("click", closeModalWindow);
+  //Video Window
+  const buttonVideo = document.querySelector(".button-video");
+  buttonVideo.addEventListener("click", function () {
+    document.querySelector(".videoWindow").classList.remove("hidden");
+    document.querySelector(".overlay").classList.remove("hidden");
+  });
+});
 
-document.querySelector(".overlay").addEventListener("click", closeModalWindow);
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+//Closing with button
+const btnClose = document.querySelectorAll(".close-modal");
+const overlay = document.querySelector('.overlay');
+
+btnClose.forEach(button => {
+  button.addEventListener('click', closeModalWindow);
+});
+
+
+//Closing with escape key
+document.addEventListener('keydown', (e)=> {
+  if (e.key === 'Escape' && !overlay.classList.contains('hidden')) {
     closeModalWindow();
   }
 });
+
+//Closing with overlay
+overlay.addEventListener('click', closeModalWindow);
+
+

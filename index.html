@@ -15,11 +15,11 @@
   </head>
 
   <body>
-    <button class="show-modal">Show modal 1</button>
-    <button class="show-modal">Show modal 2</button>
-    <button class="show-modal">Show modal 3</button>
+    <button class="button-text btn">Text</button>
+    <button class="button-image btn">Image</button>
+    <button class="button-video btn">Video</button>
 
-    <div class="modal hidden">
+    <div class="textWindow hidden">
       <button class="close-modal">&times;</button>
       <h1>I'm a modal window</h1>
       <p>
@@ -32,6 +32,21 @@
         mollit anim id est laborum.
       </p>
     </div>
+
+    <div class="imageWindow hidden">
+      <button class="close-modal">&times;</button>
+      <img class="image" src="./src/assets/tuscany.jpg" alt="Tuscany landscape" />
+    </div>
+
+    <div class="videoWindow hidden">
+      <button class="close-modal">&times;</button>
+      <video class="video" controls>
+        <source src="./src/assets/ocean-video.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
     <div class="overlay hidden"></div>
 
     <script src="script.js" type="module"></script>

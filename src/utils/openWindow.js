@@ -1,6 +1,6 @@
-const openModalWindow = function () {
-  document.querySelector(".modal").classList.remove("hidden");
-  document.querySelector(".overlay").classList.remove("hidden");
-};
+// const openWindow = (props) => {
+//   document.querySelector(props).classList.remove("hidden");
+//   document.querySelector(".overlay").classList.remove("hidden");
+// };
 
-export default openModalWindow;
+// export default openWindow;

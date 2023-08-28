@@ -1,5 +1,7 @@
 const closeModalWindow = function () {
-  document.querySelector(".modal").classList.add("hidden");
+  document.querySelector(".textWindow").classList.add("hidden");
+  document.querySelector(".imageWindow").classList.add("hidden");
+  document.querySelector(".videoWindow").classList.add("hidden");
   document.querySelector(".overlay").classList.add("hidden");
 };
 
